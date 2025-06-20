@@ -1,0 +1,23 @@
+QUEUE ADT (Abastract Data Type):
+
+An abstract data type that supports the following methods for a queue Q:
+
+Q.enqueue(e): add element e to the back of the queue
+Q.dequeue(): remove and return the first element from the Q.  If Q is empty an error occurs.  
+Q.first(): return the element at the front of the queue Q
+Q.isEmpty(): return True if Q is empty, false otherwise
+len(Q): the number of elements in the queue Q
+
+Example2: implement a queue based on a circular array
+Example1: implement a queue with a fixed size array and then give the choice to extend the size
+Example3: implement a queue using a stack (or two)
+Example4: implement a double ended queue, which is called a deque D
+
+--> D.addFirst(e): add element e to the front of D
+--> D.addLast(e): add element e to end of D
+--> D.deleteFirst(): remove and return first elment of D
+-->D.deleteLast(): remove and return last element of D
+--> D.first()
+--> D.last(): return the last element of D
+--> D.isEmpty()
+--> len(D)
