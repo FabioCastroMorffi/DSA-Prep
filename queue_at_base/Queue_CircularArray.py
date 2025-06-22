@@ -1,37 +1,37 @@
 class CircularQueue:
     def __init__(self, maxsize):
-        self.__data = [0] * maxsize
-        self.__size = 0
-        self.__front = 0
-        self.__max = maxsize
+        self._data = [0] * maxsize
+        self._size = 0
+        self._front = 0
+        self._max = maxsize
     def isEmpty(self)->bool:
-        return (self.__size) == 0
+        return (self._size) == 0
     def first(self) -> object:
         if self.isEmpty():
             raise ('Empty')
         else:
-            return (self.__data[self.__front])
+            return (self._data[self._front])
     def enqueue(self,element:object):
-        if self.__size == self.__max:
+        if self._size == self._max:
             raise 'Full'
-        self.__data[(self.__size + self.__front) % self.__max] = element
-        self.__size += 1
+        self._data[(self._size + self._front) % self._max] = element
+        self._size += 1
     def dequeue(self):
         if self.isEmpty():
             raise 'Empty'
         else:
             top = self.first()
-            self.__data[self.__front] = None
-            self.__size -= 1
-            self.__front += 1
+            self._data[self._front] = None
+            self._size -= 1
+            self._front = (self._front + 1) % self._max
             return top
     def __len__(self):
-        return self.__size
+        return self._size
     def __repr__(self):
         if self.isEmpty():
             return '||'
         answer = '|'
-        for elem in self.__data:
+        for elem in self._data:
             answer += str(elem) + '|'
         return answer
     
