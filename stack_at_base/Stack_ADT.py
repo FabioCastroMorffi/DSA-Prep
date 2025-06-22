@@ -1,4 +1,4 @@
-from empty.empty_exception import Empty
+#from empty.empty_exception import Empty
 class Stack:
     def __init__(self):
         self.__data = []
@@ -8,7 +8,7 @@ class Stack:
         return not(len(self.__data))
     def pop(self):
         if self.isEmpty():
-            raise Empty("Empty container")
+            raise ("Empty container")
         else:
             val = self.__data.pop(-1)
             return val
@@ -17,7 +17,7 @@ class Stack:
     
     def top(self):
         if self.isEmpty():
-            raise Empty("Empty container")
+            raise ("Empty container")
         return self.__data[-1]
     
     
