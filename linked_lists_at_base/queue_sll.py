@@ -1,4 +1,4 @@
-from empty import Empty
+#from empty import Empty
 
 class LinkedQueue:
     '''Fifo queue implementation using a sll'''
@@ -27,13 +27,13 @@ class LinkedQueue:
     
     def first(self):
         if self.isEmpty():
-            raise Empty('Queue is empty')
+            raise ('Queue is empty')
         
         return self._head._element
     
     def dequeue(self):
         if self.isEmpty():
-            raise Empty('Queue is empty')
+            raise ('Queue is empty')
         answer = self._head._element
         self._head = self._head._next
         self._size -= 1
@@ -49,3 +49,12 @@ class LinkedQueue:
             self._tail._next = new_node
         self._tail = new_node
         self._size += 1
+
+if '__main__' == __name__:
+    ll = LinkedQueue()
+    ll.enqueue(3)
+    ll.enqueue(4)
+    print(ll.first())
+    
+
+
