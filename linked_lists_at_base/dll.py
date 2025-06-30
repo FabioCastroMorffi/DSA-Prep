@@ -45,7 +45,7 @@ class DLL:
             self._header = next_node 
         elif node == self._trailer and node != self._header:
             prev_node = self._trailer._prev
-            next_node._next = None
+            prev_node._next = None
             self._trailer = prev_node
         elif self.__len__() == 1:
             self._header = self._trailer = None
