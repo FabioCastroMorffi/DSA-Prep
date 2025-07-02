@@ -47,8 +47,8 @@ class BinaryTree(Tree):
 if '__main__' == __name__:
     bt = BinaryTree()
     bt.addRoot(3)
-    bt.addLeft(bt.root(), 4)
     bt.addRight(bt.root(), 5)
+    bt.addLeft(bt.root(), 4)
     bt.addRight(bt.root(),6)
     bt.children(bt.root())
     print(bt)

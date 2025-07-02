@@ -62,10 +62,11 @@ class Tree:
 
         while queue:
             for i in range(len(queue)):
-                curr_node = queue.pop()
+                curr_node = queue.popleft()
                 lst.append(curr_node._elem)
                 if curr_node._left:
                     queue.append(curr_node._left)
+                    
                 if curr_node._right:
                     queue.append(curr_node._right)
         return ' '.join(list(map(str, lst)))
